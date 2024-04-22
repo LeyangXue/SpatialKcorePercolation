@@ -48,7 +48,7 @@ Before running the code, make sure you have the following installed:
 ## Using Pre-generated Data
 Alternatively, if you prefer not to generate the networks yourself and run k-core percolation simulation due to the long runtime, pre-generated network and k-core percolation data is available in the Mendeley dataset. 
 Follow the steps below to download the data:
-1. Access the Mendeley dataset at [10.17632/jkvk97nfjc.1].
+1. Access the Mendeley dataset at [link](10.17632/jkvk97nfjc.1).
 2. Download the network data files corresponding to your desired parameters.
 3. Extract the downloaded files to a directory of your choice.
 
