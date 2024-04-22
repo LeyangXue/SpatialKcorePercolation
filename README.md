@@ -58,6 +58,7 @@ Here's an example of how to do it:
 from utils import kcorePercolation as kp
 ## Example: Loading pre-generated network data
 ```python 
+import sys
 packagepath = '../kcorePercolation'  # Manually specify the path to your script
 sys.path.append(packagepath)
 from utils import kcorePercolation as kp # Import custom utility functions
