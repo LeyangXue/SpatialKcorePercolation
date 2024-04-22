@@ -57,14 +57,16 @@ To load pre-generated network data and k-core percolation simulation data into y
 Here's an example of how to do it:
 from utils import kcorePercolation as kp
 ## Example: Loading pre-generated network data
+```
 network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')
-Replace '../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl' with the actual path to the downloaded network data file.
+## Replace '../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl' with the actual path to the downloaded network data file.
+```
 
 ## License
 This project is licensed under the MIT License - feel free to use, modify, and distribute the code as needed.
 If you use this code in your research, please cite the following papers:
-Nucleation phenomena and extreme vulnerability of spatial k-core systems
-[Paper DOI](https://doi.org/10.48550/arXiv.2311.13579)
+*Nucleation phenomena and extreme vulnerability of spatial k-core systems*
+[Click this Paper](https://doi.org/10.48550/arXiv.2311.13579)
 >@misc{xue2023nucleation,
       title={Nucleation phenomena and extreme vulnerability of spatial k-core systems}, 
       author={Leyang Xue and Shengling Gao and Lazaros K. Gallos and Orr Levy and Bnaya Gross and Zengru Di and Shlomo Havlin},
