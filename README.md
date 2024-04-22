@@ -34,10 +34,10 @@ Note that the generation process may take a significant amount of time depending
 
 ## Plotting Figures
 Once you have completed the network generation and k-core percolation simulation, you can plot the figures to visualize the results.
-1. **Open the Python script containing the plotting functions (e.g., PlottingFunctions.py) in a text editor.
-2. **Locate the plotpinfty function within the script.
-3. **Ensure that the function parameters are correctly configured。
-4. **Execute the plotpinfty function with the appropriate parameters to generate the plot.
+1. Open the Python script containing the plotting functions (e.g., PlottingFunctions.py) in a text editor.
+2. Locate the plotpinfty function within the script.
+3. Ensure that the function parameters are correctly configured。
+4. Execute the plotpinfty function with the appropriate parameters to generate the plot.
 
 ## Prerequisites
 Before running the code, make sure you have the following installed:
