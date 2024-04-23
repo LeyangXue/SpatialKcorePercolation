@@ -310,25 +310,27 @@ def AveragePinfty(simulation_results_array):
         
     return pinfty_avg
 
-def makeaverage(kcore, zeta, simulation):
+def makeaverage(resultpath, kcore, zeta, simulation):
     '''
     Compute the average pinfty values for a given kcore and zeta parameter by aggregating simulation results.
 
     Parameters
     ----------
+    resultpath : str
+        The path to load the kcore simulation result.
     kcore : int
         Core value of the network.
     zeta : int
         Zeta parameter value.
     simulation : int
-        Simulation times 
+        Simulation times. 
         
     Returns
     -------
     pinfty_avg_dict : dict
-        Dictionary containing average pinfty values.
-        
+         A dictionary containing pinfty values for each parameter value.        
     '''
+    
     # Initialize list to store simulation results
     simulation_results =  []
     
@@ -393,7 +395,7 @@ def plotpinfty(ax, resultpath, kcore, zetas, colors, titles, PhaseTypes, ylabel,
         # Load datasets for different zeta
         if PhaseTypes[j] == 'CT':   
             # Compute average pinfty values
-            zeta_result = makeaverage(kcore, zeta, simulation)
+            zeta_result = makeaverage(resultpath, kcore, zeta, simulation)
         elif PhaseTypes[j] == 'DT':
             zeta_result = kp.load(resultpath+f'/kcore{kcore}/zeta{zeta}/kcore{kcore}_zeta{zeta}_simu{simu}_pinfty_dict.pkl')
         
