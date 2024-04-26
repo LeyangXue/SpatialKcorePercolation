@@ -9,7 +9,7 @@ import sys
 import networkx as nx
 
 # Add package path
-packagepath = 'F:/work/work12/kcorePercolation'  # Manually specify the path to your script
+packagepath = '../kcorePercolation'  # Manually specify the path to your script
 sys.path.append(packagepath)
 from utils import kcorePercolation as kp # Import custom utility functions
 
@@ -100,8 +100,8 @@ def kcorepercolationPlateau(G, rm_nodes, k, p, z, simu, savegccpath, resultpath)
 if __name__ == "__main__":
 
     # Set the paths for result, network, and gcc files
-    resultpath = 'F:/work/work12/kcorePercolation/figure3/result' 
-    networkpath = 'F:/work/work12/kcorePercolation/figure3/network'
+    resultpath = '../kcorePercolation/figure3/result' 
+    networkpath = '../kcorePercolation/figure3/network'
 
     # Set basic information about the spatial networks
     kcore = 5

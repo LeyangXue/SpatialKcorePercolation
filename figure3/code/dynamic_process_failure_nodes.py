@@ -95,7 +95,7 @@ if __name__ == "__main__":
     avg_k = 10 
     kcore = 5 
     zetas = [7, 500]  # Zeta values 10, 100
-    zetapc = {7:0.718501, 500:0.679851}#10:0.700501, 100:0.680501
+    zetapc = {7:0.718501, 500:0.679851}
     simu_dict = {7:1, 500:2}
 
     # Deal with each zeta
