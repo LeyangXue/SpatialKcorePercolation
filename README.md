@@ -1,26 +1,24 @@
 # SpatialKcorePercolation
 SpatialKcorePercolation is a Python project for generating spatial networks and performing k-core percolation simulations to analyze percolation behavior. It includes functions for generating spatial networks with various parameters, performing k-core percolation simulations, and plot the simulation results.
 
-## Introduction
-The **SpatialKcorePercolation** project is designed to analyze the robustness of spatial k-core systems by generating spatial networks and performing k-core percolation simulations. 
+## SpatialKcorePercolation Project Overview
+- **Objective:** The **SpatialKcorePercolation** project is designed to analyze the robustness of spatial k-core systems by generating spatial networks and performing k-core percolation simulations. 
 
-This repository contains code for network generation, k-core percolation simulations, result analysis, and visualization. All code is organized according to the figures presented in the associated paper **Nucleation phenomena and extreme vulnerability of spatial k-core systems**
-[link the paper](https://doi.org/10.48550/arXiv.2311.13579). 
+- **Repository Content:** This repository contains code for network generation, k-core percolation simulations and visualization. All code is organized according to the figures presented in the associated paper
+[Nucleation phenomena and extreme vulnerability of spatial k-core systems](https://doi.org/10.48550/arXiv.2311.13579). 
 
-Each directory contains the numerical simulation and plot code necessary to generate the corresponding figure, and the parameters included in the current code represent those used to generate the figures in the paper.
+- **Organization:** Each directory contains the numerical simulation and plot code necessary to generate the corresponding figure, and the parameters included in the current code represent those used to generate the figures in the paper.
 
-Additional commonly used functionalities are written in the `utils` directory, specifically in the `kcorePercolation.py` file.
+- **Additional Functionalities:** Additional commonly used functionalities are written in the `utils` directory, specifically in the `kcorePercolation.py` file.
 
-If you wish to reproduce the results presented in the paper, please download the pre-generated data from [Mendeley Data](10.17632/jkvk97nfjc.1) and execute the corresponding `plot_figurex.py` directly, where the paths of the data and the code correspond to each other, meaning you only need to place the data in the same directory as the code to run it.
+- **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](10.17632/jkvk97nfjc.1) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
 
-Please note that generating the simulation data required for each figure may take a significant amount of time due to the system size \(L \times L = 10^6\), also depending on your machine's configuration. 
+- **Note:** Generating the simulation data for each figure may require a significant amount of time due to the larger system \(L \times L = 10^6\), which also depending on your machine's configuration. 
 
-Before running the code, ensure that you set relative paths and appropriate parameters.
-
-## Core code
+## Code
 ### Network Generation
-**Usage**
-To generate networks using this code:
+
+**Usage:** To generate networks using this code:
 
 1. Clone or download this repository to your local machine.
 2. Navigate to the `/figure1/code/` directory.
