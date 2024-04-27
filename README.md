@@ -13,13 +13,11 @@ SpatialKcorePercolation is a Python project for generating spatial networks and 
 
 - **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](10.17632/jkvk97nfjc.1) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
 
-- **Note:** Generating the simulation data for each figure may require a significant amount of time due to the larger system \(L \times L = 10^6\), which also depending on your machine's configuration. 
+- **Note:** Generating the simulation data for each figure may require a significant amount of time due to the larger system $$L \times L = 10^6$$, which also depending on your machine's configuration. 
 
 ## Code
 ### Network Generation
-
-**Usage:** To generate networks using this code:
-
+**Usage:** 
 1. Clone or download this repository to your local machine.
 2. Navigate to the `/figure1/code/` directory.
 3. Open the `NetworkGeneration.py` script in a text editor.
@@ -31,19 +29,16 @@ This script generates networks with various parameters, including different zeta
 
 ### K-Core Percolation Simulation
 **Execute Numerical Simulations**:
-After generating the spatial networks, execute the k-core percolation simulations by running the code located in each directory, e.g. `\figure1\code\KCorePercolationSimulation.py`, `\figure2\code\binary_seachpc_kcore.py`. 
+- After generating the spatial networks, execute the k-core percolation simulations by running the code located in each directory, e.g. `\figure1\code\KCorePercolationSimulation.py`, `\figure2\code\binary_seachpc_kcore.py`. 
 
-If running the simulation takes too much time, pre-computed percolation results are available for download in the Mendely dataset associated with this project. Use these resulting data for analysis without running **Numerical Simulations** code.
-
-**Usage**:
-To run the code and generate simulation data, follow these steps:
+**Usage:**
 1. Ensure that the required spatial networks are generated.
 2. Navigate to the directory containing the code for the desired figure.
 3. Verify that the path configurations in the code are correct.
 4. Run the code to execute the k-core percolation simulations and generate the data.
 
 ### Plotting Figures
-Once network generation and k-core percolation simulation are complete, you can plot the figures to visualize the results.
+**Usage:**
 1. Open the Python script containing the plotting functions (e.g., `\figure3\code\plot_figure3.py`) in a text editor.
 2. Ensure that the `packagepath`, `networkpath`, `resultpath` are correctly configured.
 3. Execute the plotpinfty function with the appropriate parameters to generate the plot.
@@ -63,14 +58,13 @@ Before running the code, make sure the following are installed:
 ## Using Pre-generated Data
 Alternatively, if you prefer not to generate the networks yourself and run k-core percolation simulation due to the long runtime, pre-generated network and k-core percolation data is available in the Mendeley dataset. 
 Follow the steps below to download the data:
-1. Access the Mendeley dataset at [link](10.17632/jkvk97nfjc.1).
+1. Access the [Mendeley dataset](10.17632/jkvk97nfjc.1).
 2. Download the network data files corresponding to your desired parameters.
 3. Extract the downloaded files to a directory of your choice.
 
 ### Loading Pre-generated Data
 To load pre-generated network data and k-core percolation simulation data into your Python environment, you can use the load function from the kcorePercolation module. 
 Here's an example of how to do it:
-from utils import kcorePercolation as kp
 ### Example: Loading pre-generated network data
 ```python 
 import sys
