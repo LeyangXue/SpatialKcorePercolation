@@ -11,7 +11,7 @@ SpatialKcorePercolation is a Python project for generating spatial networks and 
 
 - **Additional Functionalities:** Additional commonly used functionalities are written in the `utils` directory, specifically in the `kcorePercolation.py` file.
 
-- **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](10.17632/jkvk97nfjc.1) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
+- **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](https://data.mendeley.com/preview/jkvk97nfjc) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
 
 - **Note:** Generating the simulation data for each figure may require a significant amount of time due to the larger system (LxL=10^6), which also depending on your machine's configuration. 
 
@@ -58,7 +58,7 @@ Before running the code, make sure the following are installed:
 ## Using Pre-generated Data
 Alternatively, if you prefer not to generate the networks yourself and run k-core percolation simulation due to the long runtime, pre-generated network and k-core percolation data is available in the Mendeley dataset. 
 Follow the steps below to download the data:
-1. Access the [Mendeley dataset](10.17632/jkvk97nfjc.1).
+1. Access the [Mendeley dataset](https://data.mendeley.com/preview/jkvk97nfjc).
 2. Download the network data files corresponding to your desired parameters.
 3. Extract the downloaded files to a directory of your choice.
 
