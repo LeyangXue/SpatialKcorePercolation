@@ -1,23 +1,27 @@
 # SpatialKcorePercolation
-SpatialKcorePercolation is a Python project for generating spatial networks and performing k-core percolation simulations to analyze percolation behavior. It includes functions for generating spatial networks with various parameters, performing k-core percolation simulations, and analyzing simulation results.
+SpatialKcorePercolation is a Python project for generating spatial networks and performing k-core percolation simulations to analyze percolation behavior. It includes functions for generating spatial networks with various parameters, performing k-core percolation simulations, and plot the simulation results.
 
 ## Introduction
-The SpatialKcorePercolation project is designed to analyze the robustness of spatial k-core systems by generating spatial networks and performing k-core percolation simulations. 
-This repository contains code for network generation, k-core percolation simulations, result analysis, and visualization.
-All code is organized according to the figures presented in the associated paper **Nucleation phenomena and extreme vulnerability of spatial k-core systems**
+The **SpatialKcorePercolation** project is designed to analyze the robustness of spatial k-core systems by generating spatial networks and performing k-core percolation simulations. 
+
+This repository contains code for network generation, k-core percolation simulations, result analysis, and visualization. All code is organized according to the figures presented in the associated paper **Nucleation phenomena and extreme vulnerability of spatial k-core systems**
 [link the paper](https://doi.org/10.48550/arXiv.2311.13579). 
+
 Each directory contains the numerical simulation and plot code necessary to generate the corresponding figure, and the parameters included in the current code represent those used to generate the figures in the paper.
+
 Additional commonly used functionalities are written in the `utils` directory, specifically in the `kcorePercolation.py` file.
+
 If you wish to reproduce the results presented in the paper, please download the pre-generated data from [Mendeley Data](10.17632/jkvk97nfjc.1) and execute the corresponding `plot_figurex.py` directly, where the paths of the data and the code correspond to each other, meaning you only need to place the data in the same directory as the code to run it.
+
 Please note that generating the simulation data required for each figure may take a significant amount of time due to the system size \(L \times L = 10^6\), also depending on your machine's configuration. 
+
 Before running the code, ensure that you set relative paths and appropriate parameters.
 
 ## Core code
 ### Network Generation
-1. **Description** 
-Generate spatial networks with various parameters to be used in k-core percolation simulations. 
-2. **Usage**
+**Usage**
 To generate networks using this code:
+
 1. Clone or download this repository to your local machine.
 2. Navigate to the `/figure1/code/` directory.
 3. Open the `NetworkGeneration.py` script in a text editor.
@@ -28,9 +32,12 @@ To generate networks using this code:
 This script generates networks with various parameters, including different zeta values, average degrees, and lattice lengths. 
 
 ### K-Core Percolation Simulation
-1. **Execute Numerical Simulations**
-After generating the spatial networks, execute the k-core percolation simulations by running the code located in each directory, e.g. `\figure1\code\KCorePercolationSimulation.py`, `\figure2\code\binary_seachpc_kcore.py`. Each directory contains the code necessary to generate the numerical simulation data required for the corresponding figure. If running the simulation takes too much time, pre-computed percolation results are available for download in the Mendely dataset associated with this project. Use these resulting data for analysis without running **Numerical Simulations** code.
-2. **Usage**:
+**Execute Numerical Simulations**:
+After generating the spatial networks, execute the k-core percolation simulations by running the code located in each directory, e.g. `\figure1\code\KCorePercolationSimulation.py`, `\figure2\code\binary_seachpc_kcore.py`. 
+
+If running the simulation takes too much time, pre-computed percolation results are available for download in the Mendely dataset associated with this project. Use these resulting data for analysis without running **Numerical Simulations** code.
+
+**Usage**:
 To run the code and generate simulation data, follow these steps:
 1. Ensure that the required spatial networks are generated.
 2. Navigate to the directory containing the code for the desired figure.
@@ -38,13 +45,13 @@ To run the code and generate simulation data, follow these steps:
 4. Run the code to execute the k-core percolation simulations and generate the data.
 
 ### Plotting Figures
-Once you have completed the network generation and k-core percolation simulation, you can plot the figures to visualize the results.
+Once network generation and k-core percolation simulation are complete, you can plot the figures to visualize the results.
 1. Open the Python script containing the plotting functions (e.g., `\figure3\code\plot_figure3.py`) in a text editor.
-2. Ensure that the `packagepath`, `networkpath`, `resultpath` are correctly configured。
+2. Ensure that the `packagepath`, `networkpath`, `resultpath` are correctly configured.
 3. Execute the plotpinfty function with the appropriate parameters to generate the plot.
 
 ## Prerequisites
-Before running the code, make sure you have the following installed:
+Before running the code, make sure the following are installed:
 
 - Python 3.x
 - NumPy
@@ -78,12 +85,9 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 
 ## License
 > This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as needed.
->
 > If you use this code in your research, please cite the following paper:
->
 > **Nucleation phenomena and extreme vulnerability of spatial k-core systems**
 > - [Link to the paper](https://doi.org/10.48550/arXiv.2311.13579)
->
 > ```
 > @misc{xue2023nucleation,
 >       title={Nucleation phenomena and extreme vulnerability of spatial k-core systems}, 
