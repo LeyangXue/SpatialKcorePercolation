@@ -2,7 +2,7 @@
 SpatialKcorePercolation is a Python project for generating spatial networks and performing k-core percolation simulations to analyze percolation behavior. It includes functions for generating spatial networks with various parameters, performing k-core percolation simulations, and plot the simulation results.
 
 ## SpatialKcorePercolation Project Overview
-- **Objective:** The **SpatialKcorePercolation** project is designed to analyze the robustness of spatial k-core systems by generating spatial networks and performing k-core percolation simulations. 
+- **Objective:** The **SpatialKcorePercolation** project aims to explore the critical behavior and assess the robustness of spatial k-core systems through the generation of spatial networks and performing k-core percolation simulations. 
 
 - **Repository Content:** This repository contains code for network generation, k-core percolation simulations and visualization. All code is organized according to the figures presented in the associated paper
 [Nucleation phenomena and extreme vulnerability of spatial k-core systems](https://doi.org/10.48550/arXiv.2311.13579). 
