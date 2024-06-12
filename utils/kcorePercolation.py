@@ -1140,3 +1140,168 @@ def RunSimulationBinaryPc(args):
     p = BinarySearchPc(G, kcore, threshold)
     
     return p
+
+def max_consecutive_length(lst, L):
+    '''
+    Find the maximum length of consecutive identical elements in a list.
+
+    Parameters
+    ----------
+    lst : list
+        The input list.
+    L : int
+        The size of the lattice.
+
+    Returns
+    -------
+    max_length : int
+        The maximum length of consecutive identical elements.
+    origin : tuple
+        The coordinates of the origin of the consecutive sequence.
+
+    '''
+    
+    # Connect the list from the first to the end to handle cyclic sequences
+    if lst[0] != lst[-1]:
+        seq_lst = list(lst) # If it's not cyclic, use the original list
+    else:
+        # Extract the same consecutive elements and add them to the end of the list
+        s = 1
+        for i in range(0,len(lst)-1):
+            if lst[i] == lst[i+1]:
+                 s +=1   
+            else:
+                 break  
+        seq_lst = list(lst) + list(lst[:s])
+        
+    # Initialize the maximum length and current length of consecutive elements
+    max_length = 1
+    current_length = 1
+    
+    # Traverse the list and check if the current value is equal to the next value
+    end = 0
+    for k in range(len(seq_lst)-1):
+        if seq_lst[k] == seq_lst[k+1]:
+            current_length += 1
+        else:
+            # Update the maximum length
+            if current_length > max_length:
+                max_length = current_length
+                end = k
+            # Reset the current length
+            current_length = 1
+    
+    # Update the maximum length if the loop ends with the condition in the else block
+    if current_length > max_length:
+        max_length = current_length
+        end = k
+    
+    # Check if the maximum length exceeds the specified limit L
+    if max_length >= L:
+        max_length = L 
+    
+    # Check the index of the last point in the sequence
+    if end >= L:
+        lattice_endpoint  = end % L
+    else:
+        lattice_endpoint = end
+    
+    # Calculate the indices of the initial and last points of the consecutive sequence
+    origin = (end-max_length, lattice_endpoint)
+    
+    return max_length, origin
+
+def LocalizeCircleOrigin(matrix_t, L):
+    '''
+    Localize the origin of a circle in the network matrix.
+
+    Parameters
+    ----------
+    matrix_t : numpy.ndarray
+        Transposed network matrix.
+    L : int
+        Size of the lattice.
+
+    Returns
+    -------
+    origin : tuple
+        the origin coordinates.
+    radius : float
+        radius of the circle.
+
+    '''
+    row = []
+    row_point = []
+    columns = []
+    column_point = []
+    
+    # Iterate over rows and columns of the transposed network matrix
+    for i in np.arange(matrix_t.shape[0]):
+        row_seq = matrix_t[i,:]
+        [row_diameter, rpoint] = max_consecutive_length(row_seq,L)
+        column_seq = matrix_t[:,i]
+        [column_diameter, cpoint] =  max_consecutive_length(column_seq, L)
+        row_point.append(rpoint)
+        row.append(row_diameter)
+        column_point.append(cpoint)
+        columns.append(column_diameter)
+    
+    # Convert row and column lists to arrays
+    row_array = np.array(row)
+    column_array = np.array(columns)
+    
+    # Find the index of the maximum diameter in rows and columns
+    row_inx = np.argmax(row_array)
+    row_radius= row_array[row_inx]
+    row_index = row_point[row_inx]
+    
+    # Check the row origin point 
+    row_origin = row_index[0]+row_radius/2
+    if row_origin >= L:
+        row_origin = row_origin % L
+        
+    # Find the index of the maximum diameter in columns
+    column_inx = np.argmax(column_array)
+    colums_radius = column_array[column_inx]
+    col_index = column_point[column_inx]
+    
+    # Check the column origin point 
+    col_origin = col_index[0]+colums_radius/2
+    if col_origin >= L:
+        col_origin = col_origin % L
+        
+    # Calculate the radius and origin of the circle        
+    radius = (row_radius + colums_radius)/2
+    origin = (row_origin, col_origin)
+    
+    return origin,  radius
+
+def transform2M(results,zeta_net):
+    '''
+    Transform the results into a network matrix.
+
+    Parameters
+    ----------
+    results : list
+        List of tuples representing the connected components.
+    zeta_net : networkx.Graph
+        The input network.
+
+    Returns
+    -------
+    net_matrix: numpy.ndarray
+        Network matrix.
+
+    '''
+    # Obtain the stable state
+    connected_component = results
+
+    # Draw the connected component 
+    max_node = max(zeta_net.nodes())
+    net_matrix = np.zeros((max_node[0]+1, max_node[0]+1))
+    for each_cc in connected_component:
+            x = int(each_cc[0])
+            y = int(each_cc[1])
+            net_matrix[x,y] = 1
+    
+    return net_matrix
