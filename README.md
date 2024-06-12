@@ -80,7 +80,8 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11624248.svg)](https://zenodo.org/records/11624248)
 
 > This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as needed.
-> If you use this code in your research, please cite the following paper:
+> If you use this code in your research, please cite the following paper and the software:
+> 
 > **Nucleation phenomena and extreme vulnerability of spatial k-core systems**
 > - [Link to the paper](https://doi.org/10.48550/arXiv.2311.13579)
 > ```
@@ -91,6 +92,20 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 >       eprint={2311.13579},
 >       archivePrefix={arXiv},
 >       primaryClass={physics.soc-ph}
+> }
+> ```
+> 
+> **SpatialKcorePercolation Software**
+> - [Link to the software](https://zenodo.org/records/11624248)
+> ```
+> @software{SpatialKcorePercolation,
+>       author = {Leyang Xue},
+>       title = {SpatialKcorePercolation},
+>       version = {1.0.0},
+>       doi = {10.5281/zenodo.11624248},
+>       url = {https://zenodo.org/records/11624248},
+>       year = {2024},
+>       license = {MIT}
 > }
 > ```
 
