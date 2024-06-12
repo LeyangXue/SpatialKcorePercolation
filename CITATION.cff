@@ -1,10 +1,14 @@
-Citation-Type: BibTeX
-Message: If you use this software, please cite it as below.
-Entry: {
-    Name: SpatialKcorePercolation
-    Version: 1.0
-    DOI: 10.5281/zenodo.11624248
-    Repository: https://github.com/LeyangXue/SpatialKcorePercolation
-    License: MIT
-    Description: A Python project for generating spatial networks and performing k-core percolation simulations.
-}
+cff-version: 1.0.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Xue"
+    given-names: "Leyang"
+    orcid: "https://orcid.org/0000-0001-9304-7438"
+title: "SpatialKcorePercolation"
+version: 1.0
+doi: 10.5281/zenodo.11624247
+date-released: 2024-06-12
+url: "https://github.com/LeyangXue/SpatialKcorePercolation"
+license: "MIT"
+description: |
+  A Python project for generating spatial networks and performing k-core percolation simulations.
