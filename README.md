@@ -77,8 +77,6 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 
 ## License
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11624248.svg)](https://zenodo.org/records/11624248)
-
 > This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as needed.
 > If you use this code in your research, please cite the following paper and the software:
 > 
@@ -95,7 +93,8 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 > }
 > ```
 > 
-> **SpatialKcorePercolation Software**
+> **SpatialKcorePercolation Software** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11624248.svg)](https://zenodo.org/records/11624248)
+
 > - [Link to the software](https://zenodo.org/records/11624248)
 > ```
 > @software{SpatialKcorePercolation,
