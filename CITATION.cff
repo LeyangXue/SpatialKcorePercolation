@@ -1,0 +1,10 @@
+Citation-Type: BibTeX
+Message: If you use this software, please cite it as below.
+Entry: {
+    Name: SpatialKcorePercolation
+    Version: 1.0
+    DOI: 10.5281/zenodo.11624248
+    Repository: https://github.com/LeyangXue/SpatialKcorePercolation
+    License: MIT
+    Description: A Python project for generating spatial networks and performing k-core percolation simulations.
+}
