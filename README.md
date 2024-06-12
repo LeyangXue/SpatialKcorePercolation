@@ -94,9 +94,9 @@ network_data = kp.load('../figure1/network/NetID0_avgk10_zeta7_spatialNet.pkl')#
 > ```
 > 
 > **SpatialKcorePercolation Software** 
-
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11624248.svg)](https://zenodo.org/records/11624248)
-
+> 
+> [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11624248.svg)](https://zenodo.org/records/11624248)
+>
 > - [Link to the software](https://zenodo.org/records/11624248)
 > ```
 > @software{SpatialKcorePercolation,
