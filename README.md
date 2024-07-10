@@ -11,7 +11,7 @@ SpatialKcorePercolation is a Python project for generating spatial networks and 
 
 - **Additional Functionalities:** Additional commonly used functionalities are written in the `utils` directory, specifically in the `kcorePercolation.py` file.
 
-- **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](https://data.mendeley.com/preview/jkvk97nfjc) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
+- **Replicating Results:** If you want to replicate the results presented in the paper, simply download the pre-generated data from [Mendeley Data](https://data.mendeley.com/datasets/jkvk97nfjc/1) and directly execute the corresponding `plot_figurex.py`. The data and code paths match, so you only need to place the data in the same directory as the code to run it.
 
 - **Note:** Generating the simulation data for each figure may require a significant amount of time due to the larger system (LxL=10^6), which also depending on your machine's configuration. 
 
